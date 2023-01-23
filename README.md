@@ -7,3 +7,9 @@
 #### Stack:
 
 - React
+
+---
+
+##### Future plans:
+
+- all emojis
