@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/emoji-splitter/static/css/main.16a75b97.css",
+    "main.js": "/emoji-splitter/static/js/main.d97e6689.js",
+    "index.html": "/emoji-splitter/index.html",
+    "main.16a75b97.css.map": "/emoji-splitter/static/css/main.16a75b97.css.map",
+    "main.d97e6689.js.map": "/emoji-splitter/static/js/main.d97e6689.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16a75b97.css",
+    "static/js/main.d97e6689.js"
+  ]
+}
