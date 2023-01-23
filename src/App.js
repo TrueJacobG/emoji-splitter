@@ -6,9 +6,14 @@ function App() {
   const [emoji, setEmoji] = useState("0");
   const [words, setWords] = useState("");
   const [result, setResult] = useState("");
+  const [clip, setClip] = useState("Copy Text");
 
   const addToClipboard = () => {
     navigator.clipboard.writeText(result);
+    setClip("Copied");
+    setTimeout(() => {
+      setClip("Copy Text");
+    }, 1000);
   };
 
   useEffect(() => {
@@ -19,11 +24,10 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>Type what u want :D</h1>
-        <h3>Select emoji (or select from list)</h3>
+        <h1>Emoji Splitter</h1>
       </div>
-      <div>
-        <select name="emoji" id="emoji" onChange={(e) => setEmoji(e.target.value)}>
+      <div className="emoji-section">
+        <select name="emoji" id="emoji-select" onChange={(e) => setEmoji(e.target.value)}>
           <option value="0">🥺</option>
           <option value="1">❤️</option>
           <option value="2">🥰</option>
@@ -37,11 +41,22 @@ function App() {
         </select>
       </div>
       <div>
-        <textarea name="words" id="words" cols="30" rows="10" onChange={(e) => setWords(e.target.value)}></textarea>
+        <textarea
+          name="words"
+          id="words-area"
+          cols="30"
+          rows="10"
+          placeholder="Select emoji & type something"
+          onChange={(e) => setWords(e.target.value)}
+        ></textarea>
       </div>
-      <div className="result">{result}</div>
       <div className="clipboard">
-        <button onClick={addToClipboard}> Copy Text</button>
+        <button id="clipboard-button" onClick={addToClipboard}>
+          {clip}
+        </button>
+      </div>
+      <div className="result-section">
+        {result ? <p id="result">{result}</p> : <p id="placeholder-result">Splitted text will be displayed here</p>}
       </div>
     </div>
   );

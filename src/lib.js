@@ -5,6 +5,10 @@ function getEmoji(n) {
 }
 
 export function formatWords(words, choice) {
+  if (words.length === 0) {
+    return;
+  }
+
   let emoji = getEmoji(parseInt(choice));
   let result = "";
   words
