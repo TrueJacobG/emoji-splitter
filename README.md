@@ -1,3 +1,9 @@
-#### Simple Emoji Splitter
+### Simple Emoji Splitter
 
-##### in React
+##### https://truejacobg.github.io/emoji-splitter/
+
+---
+
+#### Stack:
+
+- React
